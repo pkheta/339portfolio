@@ -1,0 +1,166 @@
+img{
+  width: 600px;
+  align-self: center
+  max-height: 400px;
+}
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif; 
+ }
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+
+  text-shadow: 5px 5px 2px #808080;
+}
+
+
+nav li{
+  display:inline;
+  padding-right:20px;
+
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+nav a:hover{
+  text-decoration: underline;    
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+
+  margin-top: -40px;
+
+  /*Your code here - position relative to the parent */
+  /*Your code here - place 40px higher */;
+}
+
+/*Your code here*/
+.skip a:focus{
+  margin-top: 0px;
+
+}
+/*Add the selector and rule to move the skip 
+link to the exact top of the page.*/
+*:focus{
+  border: 2px solid black;
+
+
+}
+
+
+
+@-webkit-keyframes logo_wiggle{
+  from {
+    width: 5px;
+  }
+  to{
+    width: 25px;
+  }
+}
+
+@keyframes logo_wiggle{
+  from {
+    width: 5px;
+  }
+  to{
+    width: 25px;
+  }
+} 
+
+#wolverine-logo{
+  animation-name: logo_wiggle;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+
+  
+}
+
+#onpage{
+  color: #ffffff;
+  border: 2px dotted #ffffff;
+}
+
+
+.flipcard{
+  position: realtive;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+ transform-style: preserve-3d;
+
+  
+  transition: transform 0.5s;
+ 
+}
+
+
+
+.flip-container{
+  margin: 15px auto;
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ffffff;
+
+}
+
+
+
+.flip-container:hover .flipcard{
+
+  transform: rotateY(180deg);
+}
+
+#fliplink:focus .flipcard{
+
+  transform: rotateY(180deg);
+}
+
+.flipcardback{
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.flipcardfront, .flipcardback{
+  position: absolute;
+  width: 100%;
+
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+
+
+
+
+div.flipcardback img{
+  width: 300px;
+  filter: brightness(125%)
+}
+
+
